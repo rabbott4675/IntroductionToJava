@@ -12,7 +12,6 @@ public class TwoTwentyThree {
 		double milesPerGallon;
 		double pricePerGallon;
 
-		// Input from user
 		System.out.print("Enter the driving distance: ");
 		distance = input.nextDouble();
 
@@ -22,10 +21,10 @@ public class TwoTwentyThree {
 		System.out.print("Enter price per gallon: ");
 		pricePerGallon = input.nextDouble();
 
-		input.close(); // closing scanner
+		input.close();
 
 		double total = distance / milesPerGallon * pricePerGallon;
-		// Displaying total cost
-		System.out.printf("The cost of driving is $%.2f", total);
+
+        System.out.printf("The cost of driving is $%.2f", total);
 	}
 }

@@ -6,9 +6,9 @@ public class FourSeventeen {
 	public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter a year (2014): " );
+        System.out.print("Enter a year (Ex: 2013): " );
         int year = input.nextInt();
-        System.out.print("Enter a month (Jul): " );
+        System.out.print("Enter a month (Ex: May): " );
         String month = input.next();
         input.close();
 
@@ -20,15 +20,13 @@ public class FourSeventeen {
 
         System.out.println(month + " " + year + " has " +
                 getNumOfDaysInMonth(year, getMonthNumber(month)) + " days.");
-
     }
-
 
     static int getNumOfDaysInMonth(int year, int month) {
 
         switch (month) {
             case 1: return 31;
-            case 2: return isLeapYear(year) ? 28 : 29;
+            case 2: return leapYear(year) ? 28 : 29;
             case 3: return 31;
             case 4: return 30;
             case 5: return 31;
@@ -45,56 +43,56 @@ public class FourSeventeen {
     }
 
     public static int getMonthNumber(String month) {
-
-        int monthNumber;
-
+        
+        int month;
+        
         switch (month) {
             case "Jan":
-                monthNumber = 1;
+                month = 1;
                 break;
             case "Feb":
-                monthNumber = 2;
+                month = 2;
                 break;
             case "Mar":
-                monthNumber = 3;
+                month = 3;
                 break;
             case "Apr":
-                monthNumber = 4;
+                month = 4;
                 break;
             case "May":
-                monthNumber = 5;
+                month = 5;
                 break;
             case "Jun":
-                monthNumber = 6;
+                month = 6;
                 break;
             case "Jul":
-                monthNumber = 7;
+                month = 7;
                 break;
             case "Aug":
-                monthNumber = 8;
+                month = 8;
                 break;
             case "Sep":
-                monthNumber = 9;
+                month = 9;
                 break;
             case "Oct":
-                monthNumber = 10;
+                month = 10;
                 break;
             case "Nov":
-                monthNumber = 11;
+                month = 11;
                 break;
             case "Dec":
-                monthNumber = 12;
+                month = 12;
                 break;
             default:
-                monthNumber = 0;
+                month = 0;
                 break;
         }
 
-        return monthNumber;
+        return month;
     }
 
 
-    static boolean isLeapYear(int year) {
+    static boolean leapYear(int year) {
         return (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0));
     }
 

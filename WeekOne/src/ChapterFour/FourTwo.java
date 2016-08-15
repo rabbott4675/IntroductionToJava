@@ -18,9 +18,6 @@ public class FourTwo {
         double y2 = input.nextDouble();
         input.close();
 
-        // Solving for the distance between the two points
-        // Formula: d = radius * arccos(sin(x1) * sin(x2) + cos(x1) * cos(x2) * cos(y1 - y2))
-
         double radius = AVERAGE_EARTH_RADIUS;
 
         double distance = radius *
